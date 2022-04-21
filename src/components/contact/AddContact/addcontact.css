@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body {
+    margin:0;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(250, 219, 178);
+}
+
+.add-contact {
+    margin:0;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(224, 188, 140);
+    height: 100vh;
+    color: black;
+}

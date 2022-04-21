@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+body {
+    margin:0;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(250, 219, 178);
+}
+
+/*Contact Image in Edit contact section */
+.edit-contact-img{
+height: 300px;
+width: 300px;
+border-radius: 50%;
+
+
+}
