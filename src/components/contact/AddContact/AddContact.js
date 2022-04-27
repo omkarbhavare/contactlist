@@ -6,7 +6,7 @@ import './addcontact.css'
 export default function AddContact() {
 
   
-{/* using useState hook for assigning values*/}
+//using useState hook for assigning values
   let [state,setState]=useState({
     loading:false,
     contact:{
@@ -19,7 +19,7 @@ export default function AddContact() {
     }
   });
 
-  {/*  Updating the information */}
+//  Updating the information 
   let updateInput=(event)=>{
     setState({
       ...state,
@@ -30,7 +30,7 @@ export default function AddContact() {
     })
   }
 
-  {/* SettingUp Create Contact Function */}
+// SettingUp Create Contact Function 
   let submitForm=async (event)=>{
     event.preventDefault();
     try{
@@ -75,7 +75,7 @@ export default function AddContact() {
               value={contact.mobile}
               onChange={updateInput}
               required={true}
-              type='number' className='form-control' placeholder='Mobile'/>
+              type='text' className='form-control' placeholder='Mobile'/>
             </div>
             <div className='mb-2'>
               <input 
@@ -110,7 +110,7 @@ export default function AddContact() {
               type='text' className='form-control' placeholder='Photo Url'/>
             </div>
             <div className='mb-2'>
-              <input type='submit' className='btn btn-success' value='Create'/>
+            <Link to={'/contacts/list'} className="btn btn-success ms-2">Submit</Link>
               <Link to={'/contacts/list'} className="btn btn-dark ms-2">Cancel</Link>
             </div>
           </form>

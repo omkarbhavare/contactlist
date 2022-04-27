@@ -41,7 +41,7 @@ export default function ViewContact() {
 
   return (
     <>
-{/* Fetching user specific info to display */}
+{/* Fetching user specific info to display  */}
     <section className='view-contact p-3'>
       <div className='container'>
         <div className='row'>
@@ -67,16 +67,16 @@ export default function ViewContact() {
                 Name: <span className='fw-bold'>{contact.name}</span>
               </li>
               <li className='list-group-item list-group-item-action'>
-                Mobile: <span className='fw-bold'>{contact.mobile}</span>
+                Mobile: <span className='fw-bold'>{contact.phone}</span>
               </li>
               <li className='list-group-item list-group-item-action'>
                 Email: <span className='fw-bold'>{contact.email}</span>
               </li>
               <li className='list-group-item list-group-item-action'>
-                Company: <span className='fw-bold'>{contact.company }</span>
+                Company: <span className='fw-bold'>{contact.company.name }</span>
               </li>
               <li className='list-group-item list-group-item-action'>
-                Address:  <span className='fw-bold'>{contact.address}</span>
+                Address:  <span className='fw-bold'>{contact.address.suite + " " + contact.address.city}</span>
               </li>
               <li className='list-group-item list-group-item-action'>
                 Website: <span className='fw-bold'>{contact.website}</span>

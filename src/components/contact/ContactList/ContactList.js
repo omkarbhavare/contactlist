@@ -15,7 +15,7 @@ export default function ContactList() {
     errorMessage: ''
   });
 
-  {/*Fetching All Contacts */}
+  // Fetching All Contacts 
   useEffect(() => {
     (async () => {
       try {
@@ -114,7 +114,7 @@ export default function ContactList() {
                                     Name : <span className='fw-bold'>{contact.name}</span>
                                   </li>
                                   <li className='list-group-item list-group-iem-action'>
-                                    Mobile : <span className='fw-bold'>{contact.mobile}</span>
+                                    Mobile : <span className='fw-bold'>{contact.phone}</span>
                                   </li>
                                   <li className='list-group-item list-group-iem-action mb-1'>
                                     Email : <span className='fw-bold'>{contact.email}</span>

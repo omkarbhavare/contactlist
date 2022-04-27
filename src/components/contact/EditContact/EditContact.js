@@ -6,9 +6,9 @@ import './editcontact.css'
 
 export default function EditContact() {
 
-  let { contactId } = useParams(); {/* Receiving contactId from ContactList when clicked i=on edit button*/ }
+  let { contactId } = useParams(); /* Receiving contactId from ContactList when clicked i=on edit button*/ 
 
-  {/* Setting up usestate function to update user information*/ }
+  /* Setting up usestate function to update user information*/ 
   let [state, setState] = useState({
     loading: false,
     contact: {
@@ -43,7 +43,7 @@ export default function EditContact() {
     })();
   }, [contactId]);
 
-{/* Update the Input in the event */}
+/* Update the Input in the event */
   let updateInput = (event) => {
     setState({
       ...state,
@@ -54,7 +54,7 @@ export default function EditContact() {
     })
   }
 
-  {/* Submit Form */}
+  /* Submit Form */
 
   let submitForm = async (event) => {
     event.preventDefault()
@@ -78,7 +78,7 @@ export default function EditContact() {
        loading ? <Spinner/>:
        <>
        <section className='add-contact '>
-        {/* SettingUp Add Contact Section*/}
+        {/* SettingUp Add Contact Section*/ }
         <div className='container '>
           <div className='row ' >
             <div className='col '>
@@ -88,7 +88,7 @@ export default function EditContact() {
             </div>
           </div>
           
-          {/* View Earlier Details of User & Update it by calling Event */}
+           {/* View Earlier Details of User & Update it by calling Event  */}
           <div className='row align-items-center justify-content-center'>
           <div className='col-md-6 mb-2  '>
           <img src={contact.photo ? contact.photo :"https://cdn.icon-icons.com/icons2/2120/PNG/512/user_account_person_avatar_icon_131248.png"} className='edit-contact-img' />
@@ -106,10 +106,10 @@ export default function EditContact() {
                 <div className='mb-2'>
                   <input
                   name="mobile" 
-                  value={contact.mobile}
+                  value={contact.phone}
                   onChange={updateInput}
                   required={true} 
-                  type='number' className='form-control' placeholder='Mobile' />
+                  type='text' className='form-control' placeholder='Mobile' />
                 </div>
                 <div className='mb-2'>
                   <input
@@ -121,22 +121,6 @@ export default function EditContact() {
                 </div>
                 <div className='mb-2'>
                   <input
-                  name="company" 
-                  value={contact.company}
-                  onChange={updateInput}
-                  required={true} 
-                  type='text' className='form-control' placeholder='Company' />
-                </div>
-                <div className='mb-2'>
-                  <input
-                  name="address" 
-                  value={contact.address}
-                  onChange={updateInput}
-                  required={true} 
-                  type='text' className='form-control' placeholder='Address' />
-                </div>
-                <div className='mb-2'>
-                  <input
                   name="photo" 
                   value={contact.photo}
                   onChange={updateInput}
@@ -145,7 +129,7 @@ export default function EditContact() {
                   type='text' className='form-control' placeholder='Photo Url' />
                 </div>
                 <div className='mb-2'>
-                  <input type='submit' className='btn btn-primary' value='Update' />
+                <Link to={'/contacts/list'} className="btn btn-dark ms-2">Update</Link>
                   <Link to={'/contacts/list'} className="btn btn-dark ms-2">Cancel</Link>
                 </div>
               </form>

@@ -1,33 +1,33 @@
-import axios from "axios"; {/*Using Axios to fetch data from Server */}
+import axios from "axios"; /*Using Axios to fetch data from Server */
 
 export class ContactService{
-    static serverURL = 'http://localhost:9000';   
+    static serverURL = 'https://jsonplaceholder.typicode.com/users';   
     
      static getAllContacts(){
-        let dataURL = `${this.serverURL}/contacts`;
+        let dataURL = `${this.serverURL}`;
         return axios.get(dataURL);
     }
 
 
     static getContact(contactId){
-        let dataURL= `${this.serverURL}/contacts/${contactId}`
+        let dataURL= `${this.serverURL}/${contactId}`
         return axios.get(dataURL);
     }
 
     static createContact(contact){
-        let dataURL =`${this.serverURL}/contacts`;
+        let dataURL =`${this.serverURL}`;
         return axios.post(dataURL,contact);
     }
 
 
     static updateContact(contact,contactId){
-        let dataURL=`${this.serverURL}/contacts/${contactId}`;
+        let dataURL=`${this.serverURL}/${contactId}`;
         return axios.put(dataURL,contact);
 
     }
 
     static deleteContact(contactId){
-        let dataURL=`${this.serverURL}/contacts/${contactId}`;
+        let dataURL=`${this.serverURL}/${contactId}`;
         return axios.delete(dataURL);
     }
 }
